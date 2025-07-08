@@ -28,7 +28,9 @@
                     <div style="display: flex; align-items: flex-start; background: #fafbfc; border: 1px solid #e0e0e0; border-radius: 12px; padding: 1em; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
                       <img src="{{ pub.image | default: '/images/landscape-trees.jpg' | relative_url }}" alt="{{ pub.title }}" style="width: 140px; height: 100px; object-fit: cover; border-radius: 10px; margin-right: 1.5em; flex-shrink: 0;">
                       <div>
-                        <a href="{{ pub.url | relative_url }}" style="font-size: 1.1em; font-weight: 500; color: #1976d2; text-decoration: none;">{{ pub.title }}</a><br>
+                        <a href="{% if pub.link %}{{ pub.link }}{% elsif pub.doi %}{{ pub.doi }}{% else %}{{ pub.url | relative_url }}{% endif %}"{% if pub.link or pub.doi %} target="_blank" rel="noopener"{% endif %} style="font-size: 1.1em; font-weight: 500; color: #1976d2; text-decoration: none;">
+                          {{ pub.title }}
+                        </a><br>
                         <small style="color: #444;">{{ pub.authors }} — {{ pub.journal }}, {{ pub.year }}</small>
                       </div>
                     </div>
