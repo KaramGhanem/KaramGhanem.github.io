@@ -7,19 +7,19 @@ version: 2
 
 # Personal info
 name: Karam Ghanem
-title: Senior ML Engineer
+title: AI Researcher & Engineer
 email: ghanemkaram12@gmail.com
 # email_title: Email (Email title override)
-phone: (647) 675-7443
+#phone: (647) 675-7443
 # phone_title: Phone (Phone title override)
-website: https://scholar.google.com/citations?user=uaWuP84AAAAJ&hl=en
+#website: https://scholar.google.com/citations?user=uaWuP84AAAAJ&hl=en
 # website_title: Web (Website title override)
 
 # Dark Mode (true/false/never)
-darkmode: true
+darkmode: false
 
 # Social links
-twitter_username: jekyllrb
+#twitter_username: jekyllrb
 github_username:  KaramGhanem
 #tackoverflow_username: "00000001"
 #dribbble_username: jekyll
@@ -31,13 +31,13 @@ linkedin_username: karam-ghanem-b8a97a149
 #pinterest_username: jekyll
 #youtube_username: jekyll
 orcid_username: 0000-0001-7340-0855
-googlescholar_username: Karam Ghanem
+googlescholar_username: ghanemkaram12@gmail.com
 
 # Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+#additional_links:
+#- title: Link name
+#  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#  url: Link url (eg. https://google.com)
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -50,15 +50,20 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+  <mark>Update May 2025</mark>: I am looking for work at the intersection of AI research and impact-focused engineering, where I can apply my experience in conversational agents, large language models, and cognitively-informed machine learning to build systems that are not only intelligent, but responsible, transparent, and human-aligned.<br><br>
+  
+  <mark>About me</mark>:  I work on building AI systems that are aligned with human goals, values, and social contexts has been a central theme of my graduate work and industry research. I’ve led efforts across academia and industry on large language model fine-tuning, agentic architectures, and medical AI. My work emphasizes practical alignment, designing AI that adapts to human intent and context, while contributing to robust technical foundations including reinforcement learning with human feedback (RLHF), self-critique, retrieval-augmented generation (RAG), and multimodal representation learning. I’m especially interested in how humans interact with intelligent systems, and how design choices shape trust, usability, and social dynamics in real-world settings.
+  I recently completed a Master’s of Engineering (Thesis) at Mila Quebec AI Institute & McGill University, where I focused on applying generative models and dimensionality reduction techniques to brain imaging and genomics. I am currently a Senior ML Engineer at Braxted Group, where I design multi-agent conversational systems for immigration services. In my previous role at ServiceNow, I contributed to the development of the TapeAgents framework and advanced large language model fine-tuning pipelines using self-critique strategies and prompt optimization. Previously, I worked in firmware and optical software testing at Infinera (now Nokia), and co-founded an engineering consultancy, bridging software, hardware, and client operations. I also had the opportunity to work on semiconductor and solar cell research under Dr. Ray LaPierre.<br><br>
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  <mark>Topics of interest</mark>: Responsible AI, human-AI interaction, multi-agent systems, generative models (diffusion, transformer-based), cognitive modeling, explainability, trust in AI, personalized and goal-driven agents, and applications of AI in health, law, and public systems. <br><br>
+  
+  <mark>Past Works</mark> LLMs & Agent Architectures: TapeAgents, WebAgents, Form-Filling and Retrieval Agents using LangChain, DSPy, and RLHF pipelines - Biomedical AI: Linking high-dimensional brain imaging and genomics using dimensionality reduction and transformer fine-tuning. <br><br>
+
+  <mark>Currently</mark> Working on a series of projects reflecting on the long-term implications of AI on human identity, cognition, and social systems.
+
+#- Images ![alt text](/images/landscape-trees.jpg "Trees")
 
 content:
   - title: Projects # Title for the section
