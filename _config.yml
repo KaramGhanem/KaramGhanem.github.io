@@ -21,7 +21,7 @@ darkmode: false
 # Social links
 #twitter_username: jekyllrb
 github_username:  KaramGhanem
-#tackoverflow_username: "00000001"
+#tackstackoverflow_username: "00000001"
 #dribbble_username: jekyll
 #facebook_username: jekyll
 #flickr_username: jekyll
@@ -67,54 +67,104 @@ about_content: | # this will include new lines to allow paragraphs
 
 content:
   - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+    layout: list
+    content: |
+      <ul>
+        {% for pub in site.publications %}
+          <li>
+            <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a><br>
+            <small>{{ pub.authors }} — {{ pub.journal }}, {{ pub.year }}</small>
+          </li>
+        {% endfor %}
+      </ul>
   - title: Experience
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
-        quote: >
-          Short description of the company (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of role
+        title: Braxted Group | AI and Knowledge Team
+        sub_title: Senior ML Engineer
+        caption: November 2024 – Present
+        description: |
+          - Created a chat history data generator that creates synthetic chat history data which is representative of user-agent interactions within an Immigration chatbot servicing system using Reddit data.
+          - Utilized clustering and NLP methods like phrase mining to perform topic extraction from chat history for downstream recommendation tasks.
+          - Developed a clustering system that uses extracted user data post-interaction to identify behavioral patterns, improve personalization, and enhance response accuracy.
+          - Built a hybrid collaborative/content-based recommender system for personalized article recommendation.
+          - Developed a Form Filling Agent that dynamically extracts, stores, and updates structured user profiles based on customizable schemas, enabling context-aware handoffs to specialized sub-agents for seamless user servicing.
+          - Integrated a WebAgent using BrowserBase into a conversational AI system to autonomously retrieve and inject real-time web content when RAG confidence was low, enhancing response accuracy and maintaining seamless user interaction.
+          - Designed the WebAgent to operate contextually within multi-turn conversations, enabling it to resolve references to previously mentioned topics and convert natural language queries into accurate web browsing tasks using conversational memory.
+          - Architected a multi-agent system integrating a Form Filling Agent, RAG Agent, Web Agent and Conversational Agent to manage contextual understanding, document retrieval, response generation, and user servicing through intelligent routing.
+      - layout: right
+        title: ServiceNow Research | CAT team
+        sub_title: Visiting Researcher
+        caption: April 2024 – October 2024
+        description: |
+          - Enhanced virtual agents by fine-tuning open-source LLMs (Llama, WizardLM, Mixtral) using an RLHF loop.
+          - Refined synthetic training data quality by defining agent thoughts and actions in agent dialogue with user.
+          - Created and tested prompts for form-filling teacher agents using techniques like chain-of-thought, multi-step prompts, self-critique, intent discovery and by using prompt optimizers implemented with DSPy.
+          - Distilled teacher agent knowledge into a more efficient smaller student model then used an RLHF loop to enhance student model performance with a critique annotator agent.
+          - Used optimization techniques to significantly boost the accuracy and precision of annotator agents by 20-30% across evaluation traits, achieving the same performance as human annotators.
+      - layout: right
+        title: Mila Quebec AI Institute & McGill University
+        sub_title: Data Scientist/Researcher
+        caption: January 2022 – August 2022
+        description: |
+          - Conducted comprehensive performance analysis of diffusion models, establishing reliable comparison frameworks across different model architectures, sampling methods, and classifier guidance.
+          - Optimized diffusion model training convergence speeds while maintaining sample quality for image generation tasks.
+          - Collaborated with medical professionals to align PCA-related models with domain-specific requirements, revealing novel brain-behavior correlations in high-dimensional MRI datasets.
+          - Applied dimensionality reduction models to successfully predict key covarying brain features with strong statistical confidence, in medical datasets with limited sample sizes (<20 p / 1450 n).
+          - Fine-tuned GFMs like HyenaDNA to enhance gene expression prediction accuracy by using the fine-tuned transformer embeddings with an independent classifier.
+      - layout: right
+        title: Infinera (Now Nokia) | Digital ASICs Department
+        sub_title: Firmware Development Consultant
+        caption: November 2019 – September 2020 | March 2021- December 2021
+        description: |
+          - Consulted with customers and engineers from various departments to gather feedback and requirements, ensuring firmware updates and FPGA images met specific client needs, resulting in a reduction in post-deployment issues.
+          - Conceptualized system design, upgraded, maintained, and debugged firmware, FPGA, and hardware through written test scripts for fail-proof deployment which resulted in enhanced customer satisfaction.
+          - Lead the development of software product testing frameworks to automate overnight firmware testing using Jenkins, which sped up firmware deployment process to customers by 50%.
+      - layout: right
+        title: Infinera (Now Nokia) | Optical Design Team
+        sub_title: Software Engineer
+        caption: May 2019 - November 2019
+        description: |
+          - Consulted with optical line engineers to gather insights and ensure alignment of software functions with operational needs.
+          - Tested components of optical signal processing units with developed data analysis python GUI tools.
+          - Developed statistical and data analysis tools to enhance optical signal processing in testing systems in addition to designing complementary UI tools for signal property visualization, achieving 86% diagnostic accuracy.
+      - layout: right
+        title: GE Technical Consulting Solutions (Inactive)
+        sub_title: Senior Technical Consultant & Cofounder
+        caption: September 2020 – December 2021
+        description: |
+          - Co-founded and led a multidisciplinary engineering consulting firm, overseeing projects requiring expertise in mechanical, electrical, and software engineering.
+          - Managed company finances, including budgeting and forecasting, while successfully negotiating contracts and maintaining strong client and vendor relationships.
+          - Consulted clients to identify project requirements and led a team of 6 engineers, delivering more than 3 successful projects within the first year, consistently exceeding client expectations.
+      - layout: right
+        title: McMaster University
+        sub_title: Research Assistant
+        caption: May 2018 - August 2018
+        description: |
+          - Conducted extensive data analysis with MCMC methods on data acquired using optical equipment.
+          - Incorporated ResNet for image recognition to detect irregular surfaces on newly etched semiconductor wafers.
+          - Leveraged designed experimental framework to develop an optimized reactive ion etching formula that increased semiconductor conductivity by 7%.
   - title: Education
     layout: list
     content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      - layout: left
+        title: Mila Quebec AI Institute & McGill University
+        sub_title: Master’s of Engineering (Thesis), supervised by Dr. Danilo Bzdok
+        caption: September 2022 – April 2024
+        description: |
+          Major in Biological & Biomedical Engineering
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+          **Awards:**
+          - Mitacs Accelerate Fellowship Award: A prestigious and highly competitive award, granted to select graduate students for exceptional research potential and academic excellence.
+          - McGill Graduate Excellence Award: offered to a limited number of graduate students whose profiles are of an exceptional caliber.
+      - layout: left
+        title: McMaster University
+        sub_title: Bachelor of Engineering
+        caption: September 2016 - April 2021
+        description: |
+          Major in Engineering Physics  
+          Honors: Summa Cum Laude
 
 # Footer
 footer_show_references: true
@@ -143,3 +193,8 @@ exclude : [
   "scripts/",
   "docker-compose.yml",
   ]
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/

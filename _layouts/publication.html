@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article class="publication">
+  <h1>{{ page.title }}</h1>
+  <p><strong>Authors:</strong> {{ page.authors }}</p>
+  <p><strong>Journal:</strong> {{ page.journal }}, {{page.year}}</p>
+  {% if page.doi %}
+    <p><a href="{{ page.doi }}">View Paper (DOI link)</a></p>
+  {% elsif page.link %}
+    <p><a href="{{ page.link }}" target="_blank" rel="noopener">View Document</a></p>
+  {% endif %}
+</article> 
