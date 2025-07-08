@@ -143,3 +143,8 @@ exclude : [
   "scripts/",
   "docker-compose.yml",
   ]
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
