@@ -7,4 +7,5 @@ doi: "https://doi.org/10.3389/fnins.2023.1175690"
 equal_contributors: true
 layout: publication
 permalink: /publications/2023_durham_brain_behavior/
+image: /images/multivariate.jpg 
 --- 

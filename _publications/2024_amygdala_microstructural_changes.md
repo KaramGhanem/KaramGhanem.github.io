@@ -6,4 +6,5 @@ year: 2024
 doi: "https://doi.org/10.1038/s42003-024-06187-5"
 layout: publication
 permalink: /publications/2024_amygdala_microstructural_changes/
+image: /images/amygdala.jpg
 --- 

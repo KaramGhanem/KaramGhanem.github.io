@@ -6,4 +6,5 @@ year: 2024
 link: "https://www.servicenow.com/research/TapeAgentsFramework.pdf"
 layout: publication
 permalink: /publications/2024_tapeagents_framework/
+image: /images/TapeAgents.jpg
 --- 

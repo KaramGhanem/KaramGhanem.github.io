@@ -1,14 +1,9 @@
-<div class="container intro-container">
-  <h3 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default:
-  "About Me" }}</h3>
-  <div class="row clearfix">
-    {%- if site.about_profile_image -%}
-      <div class="col-xs-12 col-sm-4 col-md-3 no-print">
-        <span class="profile-img" style="background-image: url({{ site.about_profile_image | relative_url }}); background-position-y: 20%;"></span>
-      </div>
-    {%- endif -%}
-    <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
-      {{ site.about_content | strip | markdownify }}
-    </div>
+<div class="container intro-container" style="text-align: center;">
+  {%- if site.about_profile_image -%}
+    <span class="profile-img" style="background-image: url({{ site.about_profile_image | relative_url }}); background-position-y: 20%; width: 180px; height: 180px; border-radius: 50%; display: inline-block; margin-bottom: 1em;"></span>
+  {%- endif -%}
+  <h3 id="{{ site.about_title | slugify | default: 'about-me' }}" style="margin-top: 0.5em;">{{ site.about_title | default: "About Me" }}</h3>
+  <div>
+    {{ site.about_content | strip | markdownify }}
   </div>
 </div>
