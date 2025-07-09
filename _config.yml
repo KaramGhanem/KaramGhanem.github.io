@@ -94,7 +94,7 @@ content:
           - Integrated a WebAgent using BrowserBase into a conversational AI system to autonomously retrieve and inject real-time web content when RAG confidence was low, enhancing response accuracy and maintaining seamless user interaction.
           - Designed the WebAgent to operate contextually within multi-turn conversations, enabling it to resolve references to previously mentioned topics and convert natural language queries into accurate web browsing tasks using conversational memory.
           - Architected a multi-agent system integrating a Form Filling Agent, RAG Agent, Web Agent and Conversational Agent to manage contextual understanding, document retrieval, response generation, and user servicing through intelligent routing.
-          - See the [TapeAgents publication](/publications/2024_tapeagents_framework/) for more details.
+
       - layout: right
         title: ServiceNow Research | CAT team
         sub_title: Visiting Researcher
@@ -105,10 +105,11 @@ content:
           - Created and tested prompts for form-filling teacher agents using techniques like chain-of-thought, multi-step prompts, self-critique, intent discovery and by using prompt optimizers implemented with DSPy.
           - Distilled teacher agent knowledge into a more efficient smaller student model then used an RLHF loop to enhance student model performance with a critique annotator agent.
           - Used optimization techniques to significantly boost the accuracy and precision of annotator agents by 20-30% across evaluation traits, achieving the same performance as human annotators.
-          - See the [Uncanny Valley publication](/publications/2024_uncanny_valley_diffusion/) for more details.
+          - See the [TapeAgents publication](https://www.servicenow.com/research/TapeAgentsFramework.pdf) for more details.
+
       - layout: right
         title: Mila Quebec AI Institute & McGill University
-        sub_title: Data Scientist/Researcher
+        sub_title: Data Scientist (Contract)
         caption: January 2022 – August 2022
         description: |
           - Conducted comprehensive performance analysis of diffusion models, establishing reliable comparison frameworks across different model architectures, sampling methods, and classifier guidance.
@@ -116,7 +117,7 @@ content:
           - Collaborated with medical professionals to align PCA-related models with domain-specific requirements, revealing novel brain-behavior correlations in high-dimensional MRI datasets.
           - Applied dimensionality reduction models to successfully predict key covarying brain features with strong statistical confidence, in medical datasets with limited sample sizes (<20 p / 1450 n).
           - Fine-tuned GFMs like HyenaDNA to enhance gene expression prediction accuracy by using the fine-tuned transformer embeddings with an independent classifier.
-          - See the [Multivariate Brain-Behavior publication](/publications/2023_durham_brain_behavior/) and [Amygdala Microstructural Changes publication](/publications/2024_amygdala_microstructural_changes/) for more details.
+
       - layout: right
         title: Infinera (Now Nokia) | Digital ASICs Department
         sub_title: Firmware Development Consultant
